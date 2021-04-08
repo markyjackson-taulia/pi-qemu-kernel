@@ -20,6 +20,7 @@ $QEMU -kernel $RPI_KERNEL \
 -drive "file=$RPI_FS,index=0,media=disk,format=raw"
 
 sed -i -e 's/^/#/' /etc/ld.so.preload
+
 sed -i -e 's/^/#/' /etc/fstab
 
 $QEMU -kernel $RPI_KERNEL \
