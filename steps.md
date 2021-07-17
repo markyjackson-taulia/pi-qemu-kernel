@@ -5,11 +5,11 @@ export QEMU=$(which qemu-system-arm)
 
 brew install wget
 wget https://github.com/markyjackson-taulia/qemu-pi-kernel/raw/master/qemu-kernel-5.4.51-buster
-export RPI_KERNEL=./kernel-qemu-4.4.34-jessie
+export RPI_KERNEL=./qemu-kernel-5.4.51-buster
 
-wget http://downloads.raspberrypi.org/raspbian/images/raspbian-2016-11-29/2016-11-25-raspbian-jessie.zip
-unzip 2016-11-25-raspbian-jessie.zip
-export RPI_FS=./2016-11-25-raspbian-jessie.img
+wget http://downloads.raspberrypi.org/raspbian/images/raspbian-2020-02-14/2020-02-13-raspbian-buster.zip
+unzip 2020-02-13-raspbian-buster.zip
+export RPI_FS=./2020-02-13-raspbian-buster.img
 
 $QEMU -kernel $RPI_KERNEL \
 -cpu arm1176 -m 256 \
